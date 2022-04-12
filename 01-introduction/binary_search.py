@@ -1,9 +1,11 @@
+import math
+
 def binary_search(ranged_list, item):
     low = 0
     high = len(ranged_list) - 1
 
     while low <= high:
-        medium = (low + high) / 2
+        medium = math.ceil((low + high) / 2)
         attempt = ranged_list[medium]
 
         if attempt == item:
